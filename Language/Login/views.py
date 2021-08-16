@@ -10,6 +10,7 @@ def homepage(request):
     return render(request=request, template_name='Login/home.html')
 
 
+
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)

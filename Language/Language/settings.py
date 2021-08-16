@@ -31,14 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #  created app
+    'Dictionary',
+    "Translate",
     'Login.apps.LoginConfig',
+    #Default Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Crispy Form
+    #Third party app
     'crispy_forms',
 ]
 
