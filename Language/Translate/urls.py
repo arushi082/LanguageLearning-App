@@ -1,7 +1,7 @@
 from django.urls import path, include
 from .import views
 
-app_name = "translate"
+app_name = "Translate"
 
 urlpatterns = [
     #translate

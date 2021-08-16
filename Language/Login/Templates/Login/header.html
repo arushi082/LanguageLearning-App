@@ -10,10 +10,11 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Dictionary</a></li>
-          <li><a href="#">Translation</a></li>
+          <li><a href="{% url 'Dictionary:dictionary' %}">Dictionary</a></li>
+          <li><a href="{% url 'Translate:translate' %}">Translation</a></li>
           <li><a href="#">Learn a Language</a></li>
-          <li><a href="#">Login/Sign-up</a></li>
+          <li><a href="{% url 'Login:register' %}">Login</a></li>
+          <li><a href="{% url 'Login:login' %}">Sign-up</a></li>
         </ul>
       </nav>
     </header>
