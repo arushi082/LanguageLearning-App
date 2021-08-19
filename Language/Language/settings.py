@@ -32,8 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #  created app
-    'Dictionary',
-    "Translate",
+    'Dictionary.apps.DictionaryConfig',
+    "Translate.apps.TranslateConfig",
     'Login.apps.LoginConfig',
     #Default Apps
     'django.contrib.admin',
