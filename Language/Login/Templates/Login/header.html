@@ -1,10 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Language and word Learning App </title>
+
+    <!-- Google Font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="{% static 'Login/css/master.css' %}">
   </head>
  <body>
     <header>
@@ -22,10 +31,12 @@
 
     {% endblock %}
   <footer>
-    <li>copyright 2021</li>
-    <li>terms</li>
-    <li>privacy policy</li>
-    <li>cookies policy</li>
+    <ul>
+      <li>copyright 2021</li>
+      <li>terms</li>
+      <li>privacy policy</li>
+      <li>cookies policy</li>
+    </ul>
   </footer>
   </body>
 </html>
