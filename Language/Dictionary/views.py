@@ -1,21 +1,27 @@
 from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+
 from PyDictionary import PyDictionary
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'dictionary/index.html')
 
 
 # view for dictionary page
 def dictionary(request):
     search = request.GET.get('search')
-    dictionary1 = PyDictionary()
-    meaning = dictionary1.meaning(search)
-    synonyms = dictionary1.synonym(search)
-    antonyms = dictionary1.antonym(search)
+    dictionary = PyDictionary
+    items = []
+    meaning = dictionary.meaning(search)
+    """for key, values in meaning.items():
+        for item in values:
+            items.append(item)"""
+    synonyms = dictionary.synonym(search)
+    antonyms = dictionary.antonym(search)
     context = {
-        'meaning': meaning['Noun'][0],
+        'meaning': meaning,
         'synonyms': synonyms,
         'antonyms': antonyms
     }
-    return render(request, 'dictionary/dictionary.html', context)
+    return JsonResponse(context)
