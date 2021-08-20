@@ -5,6 +5,6 @@ app_name = "Dictionary"
 
 urlpatterns = [
     #dictionary-page
-    path("", views.dictionary, name="dictionary"),
-
+    path("", views.index, name="index"),
+    path("dictionary/", views.dictionary, name="dictionary")
     ]

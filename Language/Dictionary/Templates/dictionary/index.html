@@ -2,18 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
 </head>
 <body>
 <div class="wrap">
    <div class="search">
      <form action="word">
-      <input type="text" name="search" class="searchTerm" placeholder="Input Your Word Here">
+      <input id="word" type="text" name="search" class="searchTerm" placeholder="Input Your Word Here">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
      </button>
     </form>
    </div>
+   <div id="output">
+
+   </div>
 </div>
+<!-- at the time of hosting we have to change the url of fetch -->
+<script type="text/javascript">
+
+  const form = document.querySelector('form')
+  const word = document.querySelector('#word')
+  const output = document.querySelector('#output')
+
+  function render(data) {
+    output.innerHTML = ""
+    console.log(data.meaning.hasOwnProperty("Noun"));
+    if(data.meaning.hasOwnProperty("Noun")){
+      output.innerHTML += `<p> ${data.meaning["Noun"]} </p>`
+    }
+    if(data.meaning.hasOwnProperty("Verb")){
+      output.innerHTML += `<p> ${data.meaning["Verb"]} </p>`
+    }
+  }
+
+  form.addEventListener("submit",async (e)=>{
+    e.preventDefault()
+    console.log(word.value);
+    const response = await fetch(`http://127.0.0.1:8000/dictionary/dictionary/?search=${word.value}`)
+    const data = await response.json()
+    render(data)
+  })
+</script>
 </body>
 </html>
