@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-</head>
-<body>
-<div class="wrap">
-   <div class="search">
-     <form action="word">
-      <input id="word" type="text" name="search" class="searchTerm" placeholder="Input Your Word Here">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
+{% extends 'Login/header.html' %}
+{% load static %}
+
+  {% block content %}
+<main class="dictionary__main">
+     <form class="dictionary__search">
+
+      <input id="word" type="text" name="search" class="dictionary__search__box" placeholder="Input Your Word Here">
+      <button type="submit" class="dictionary__search__button">
+        <img src="{% static 'Login/image/icon-search.svg' %}" alt="search">
      </button>
     </form>
-   </div>
-   <div id="output">
+   <div id="output" class="dictionary__output">
 
    </div>
-</div>
+</main>
 <!-- at the time of hosting we have to change the url of fetch -->
 <script type="text/javascript">
 
@@ -33,7 +28,8 @@
       output.innerHTML += `<p> ${data.meaning["Noun"]} </p>`
     }
     if(data.meaning.hasOwnProperty("Verb")){
-      output.innerHTML += `<p> ${data.meaning["Verb"]} </p>`
+      out
+      put.innerHTML += `<p> ${data.meaning["Verb"]} </p>`
     }
   }
 
@@ -45,5 +41,4 @@
     render(data)
   })
 </script>
-</body>
-</html>
+{% endblock %}
