@@ -1,0 +1,11 @@
+header{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link + .nav__link{
+  margin-left: 1rem;
+}

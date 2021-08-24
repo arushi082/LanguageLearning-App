@@ -1,0 +1,28 @@
+.dictionary__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dictionary__search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dictionary__search__box{
+  margin-right: 2rem;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+}
+
+.dictionary__output{
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 8px 0 black;
+}
