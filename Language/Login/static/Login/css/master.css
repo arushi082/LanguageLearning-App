@@ -1,46 +1,56 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
-h1,h2{
-  font-family: 'Oswald', sans-serif;
+h1, h2 {
+  font-family: "Oswald", sans-serif;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
-a{
- color: inherit;
+a {
+  color: inherit;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
   padding-left: 0;
 }
 
-li + li{
+li + li {
   padding-left: 1rem;
 }
 
-/* css for  dictionary.html  */
+header {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.dictionary__main{
+.nav__link + .nav__link {
+  margin-left: 1rem;
+}
+
+.dictionary__main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,19 +58,19 @@ li + li{
   text-align: center;
 }
 
-.dictionary__search{
+.dictionary__search {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.dictionary__search__box{
+.dictionary__search__box {
   margin-right: 2rem;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
 
-.dictionary__output{
+.dictionary__output {
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -68,3 +78,5 @@ li + li{
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 black;
 }
+
+/*# sourceMappingURL=master.css.map */
