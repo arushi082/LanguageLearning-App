@@ -14,9 +14,6 @@ def dictionary(request):
     dictionary = PyDictionary
     items = []
     meaning = dictionary.meaning(search)
-    """for key, values in meaning.items():
-        for item in values:
-            items.append(item)"""
     synonyms = dictionary.synonym(search)
     antonyms = dictionary.antonym(search)
     context = {

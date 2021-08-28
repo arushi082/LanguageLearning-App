@@ -1,0 +1,35 @@
+{% extends 'Login/base.html' %}
+
+  {% block content %}
+
+  <!--CTA-->
+  <main class="wrapper">
+
+    <h1>Translate</h1>
+    <div class="translation__box">
+      <form class="translation__input">
+          {% csrf_token %}
+          <input type="text" name="translate">
+          <select required name="language">
+              <option value="Hindi">Hindi</option>
+              <option value="French">French</option>
+              <option value="German">German</option>
+              <option value="Spanish">Spanish</option>
+          </select>
+          <button type="submit">Translate</button>
+      </form>
+      <div id="output" class="translation__output">
+
+      </div>
+    </div>
+  <!-- XXX: http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi -->
+  </main>
+  <script type="text/javascript">
+    document.querySelector("form").addEventListener("submit",async (e)=>{
+      e.preventDefault()
+      const response = await fetch("http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi")
+      const output = await response.json()
+      console.log(output);
+    })
+  </script>
+  {% endblock %}
