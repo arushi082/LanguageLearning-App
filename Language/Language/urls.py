@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include('Login.urls')),
     path('dictionary/', include('Dictionary.urls')),
     path('translate/', include('Translate.urls')),
+    #path('curriculum/', include('curriculum.urls')),
 ]

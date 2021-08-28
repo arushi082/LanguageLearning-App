@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'Dictionary.apps.DictionaryConfig',
     "Translate.apps.TranslateConfig",
     'Login.apps.LoginConfig',
+    'curriculum.apps.CurriculumConfig',
     #Default Apps
     'django.contrib.admin',
     'django.contrib.auth',
