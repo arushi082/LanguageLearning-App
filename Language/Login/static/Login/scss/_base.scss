@@ -37,3 +37,12 @@ ul{
 li + li{
   padding-left: 1rem;
 }
+
+.wrapper{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
