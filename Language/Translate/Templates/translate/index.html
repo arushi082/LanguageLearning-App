@@ -7,10 +7,10 @@
 
     <h1>Translate</h1>
     <div class="translation__box">
-      <form class="translation__input">
+      <form id="form" class="translation__input">
           {% csrf_token %}
-          <input type="text" name="translate">
-          <select required name="language">
+          <textarea id="text" class="translation__input--text" name="translate"></textarea>
+          <select id="input-language" name="language" required>
               <option value="Hindi">Hindi</option>
               <option value="French">French</option>
               <option value="German">German</option>
@@ -25,11 +25,23 @@
   <!-- XXX: http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi -->
   </main>
   <script type="text/javascript">
-    document.querySelector("form").addEventListener("submit",async (e)=>{
+    const form = document.querySelector("#form")
+    const text = document.querySelector("#text")
+    const inputLanguage = document.querySelector("#input-language")
+    const output = document.querySelector("#output")
+
+    function render(data){
+      output.innerHTM = ""
+      output.innerHTML += `<p>${data}</p>`
+    }
+
+    form.addEventListener("submit",async (e)=>{
       e.preventDefault()
-      const response = await fetch("http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi")
-      const output = await response.json()
-      console.log(output);
+      console.log(text.value)
+      console.log(inputLanguage.value)
+      const response = await fetch(`http://127.0.0.1:8000/translate/translate/?translate=${text.value}&language=${inputLanguage.value}`)
+      const data = await response.json()
+      render(data.translation)
     })
   </script>
   {% endblock %}
