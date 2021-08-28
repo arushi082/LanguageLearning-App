@@ -18,12 +18,12 @@
  <body>
     <header>
       <div class="logo">
-        <a href="{% url 'Login:homepage' %}"><img src="{% static 'Login/image/logo.svg' %}" alt="word and language learning application"></a>
+        <a href="{% url 'Login:homepage' %}">Word Search App</a>
       </div>
       <nav>
         <ul class="nav__list">
           <li class="nav__link"><a href="{% url 'Dictionary:index' %}">Dictionary</a></li>
-          <li class="nav__link"><a href="{% url 'Translate:translate' %}">Translation</a></li>
+          <li class="nav__link"><a href="{% url 'Translate:index' %}">Translation</a></li>
           <li class="nav__link"><a href="#">Learn a Language</a></li>
           <li class="nav__link"><a href="{% url 'Login:register' %}">Login</a></li>
           <li class="nav__link"><a href="{% url 'Login:login' %}">Sign-up</a></li>

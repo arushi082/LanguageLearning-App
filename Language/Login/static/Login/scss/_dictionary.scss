@@ -1,28 +1,43 @@
+
+
 .dictionary__main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  
+}
+
+.dictionary__heading{
+  font-size: 3rem;
 }
 
 .dictionary__search{
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .dictionary__search__box{
+  min-width: 300px;
   margin-right: 2rem;
   padding: .5rem 1rem;
   border-radius: 1rem;
 }
 
+.dictionary__search-btn{
+  padding: .2rem 2rem;
+  border-radius: 2rem;
+}
+
 .dictionary__output{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: left;
   padding: 2rem;
   margin: 2rem;
   border-radius: 1rem;
   box-shadow: 4px 4px 8px 0 black;
+}
+
+.dictionary__output--heading{
+  border-bottom: 2px solid black;
 }

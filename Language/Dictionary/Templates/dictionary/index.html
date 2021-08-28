@@ -2,17 +2,18 @@
 {% load static %}
 
   {% block content %}
-<main class="dictionary__main">
-     <form class="dictionary__search">
+<main class="dictionary__main wrapper">
+  <h1 class="dictionary__heading"> Dictionary </h1>
+  <form class="dictionary__search">
+    <input id="word" type="text" name="search" class="dictionary__search__box" placeholder="Input Your Word Here">
+    <button type="submit" class="dictionary__search-btn">
+      <img src="{% static 'Login/image/icon-search.svg' %}" alt="search">
+    </button>
+  </form>
 
-      <input id="word" type="text" name="search" class="dictionary__search__box" placeholder="Input Your Word Here">
-      <button type="submit" class="dictionary__search__button">
-        <img src="{% static 'Login/image/icon-search.svg' %}" alt="search">
-     </button>
-    </form>
-   <div id="output" class="dictionary__output">
+  <div id="output" class="dictionary__output">
 
-   </div>
+  </div>
 </main>
 <!-- at the time of hosting we have to change the url of fetch -->
 <script type="text/javascript">
@@ -23,22 +24,25 @@
 
   function render(data) {
     output.innerHTML = ""
-    console.log(data.meaning.hasOwnProperty("Noun"));
-    if(data.meaning.hasOwnProperty("Noun")){
-      output.innerHTML += `<p> ${data.meaning["Noun"]} </p>`
-    }
-    if(data.meaning.hasOwnProperty("Verb")){
-      out
-      put.innerHTML += `<p> ${data.meaning["Verb"]} </p>`
-    }
+    const {meaning} = data
+    console.log(meaning)
+    const keys = Object.keys(meaning)
+    console.log(Object.keys(meaning))
+    keys.forEach((key) => {
+      output.innerHTML += `<h2 class="dictionary__output--heading">${key}<h2>`
+      meaning[key].forEach((defination) => {
+        output.innerHTML += `<p>${defination}</p>`
+      });
+    });
   }
+
 
   form.addEventListener("submit",async (e)=>{
     e.preventDefault()
-    console.log(word.value);
     const response = await fetch(`http://127.0.0.1:8000/dictionary/dictionary/?search=${word.value}`)
     const data = await response.json()
     render(data)
   })
+
 </script>
 {% endblock %}
