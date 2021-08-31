@@ -2,6 +2,7 @@
   display: flex;
   width: 80%;
   justify-content: center;
+  box-shadow: 10px 10px 19px 0 hsla(0, 0%, 10%, 0.2);
 }
 
 .translation__box>*{
@@ -9,8 +10,26 @@
 }
 
 .translation__input{
-  border: solid 2px red;
   min-height: 300px;
+  position: relative;
+  border-right: solid 4px hsl(0, 0%, 20%);
+}
+
+.translation__input--text{
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+
+}
+
+.translation__input--items{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: none;
 }
 
 .translation__input--text{
@@ -21,7 +40,8 @@
 }
 
 .translation__output{
-  border: solid 2px red;
   min-height: 300px;
-
+  text-align: left;
+  padding: 0 2rem;
+  font-size: 1.2rem;
 }

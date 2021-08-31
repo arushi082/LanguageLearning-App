@@ -10,13 +10,15 @@
       <form id="form" class="translation__input">
           {% csrf_token %}
           <textarea id="text" class="translation__input--text" name="translate"></textarea>
-          <select id="input-language" name="language" required>
-              <option value="Hindi">Hindi</option>
-              <option value="French">French</option>
-              <option value="German">German</option>
-              <option value="Spanish">Spanish</option>
-          </select>
-          <button type="submit">Translate</button>
+          <div class="translation__input--items">
+            <select id="input-language" name="language" required>
+                <option value="Hindi">Hindi</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+            </select>
+            <button type="submit">Translate</button>
+          </div>
       </form>
       <div id="output" class="translation__output">
 
@@ -31,14 +33,13 @@
     const output = document.querySelector("#output")
 
     function render(data){
-      output.innerHTM = ""
+      output.innerHTML = ""
       output.innerHTML += `<p>${data}</p>`
     }
 
     form.addEventListener("submit",async (e)=>{
+      console.log(text.value);
       e.preventDefault()
-      console.log(text.value)
-      console.log(inputLanguage.value)
       const response = await fetch(`http://127.0.0.1:8000/translate/translate/?translate=${text.value}&language=${inputLanguage.value}`)
       const data = await response.json()
       render(data.translation)
