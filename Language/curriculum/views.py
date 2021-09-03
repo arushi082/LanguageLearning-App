@@ -2,10 +2,9 @@ from django.views.generic import (TemplateView, DetailView,
                                   ListView, CreateView,
                                   UpdateView, DeleteView, FormView, )
 
-from .forms import LessonForm
 from .models import Languages, Lesson
 from django.urls import reverse_lazy
-#from .forms import LessonForm
+from .forms import LessonForm
 from django.http import HttpResponseRedirect
 
 

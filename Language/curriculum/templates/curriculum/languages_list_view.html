@@ -1,0 +1,9 @@
+{% extends 'Login/base.html' %}
+{% load static %}
+
+  {% block content %}
+{% for language in languages %}
+<a href =#>{{language.name}}</a><br>
+{% endfor %}
+
+{% endblock%}

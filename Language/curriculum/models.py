@@ -25,7 +25,7 @@ class Languages(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.subject_id)
+        self.slug = slugify(self.language_id)
         super().save(*args, **kwargs)
 
 

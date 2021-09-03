@@ -24,7 +24,7 @@
         <ul class="nav__list">
           <li class="nav__link"><a href="{% url 'Dictionary:index' %}">Dictionary</a></li>
           <li class="nav__link"><a href="{% url 'Translate:index' %}">Translation</a></li>
-          <li class="nav__link"><a href="#">Learn a Language</a></li>
+          <li class="nav__link"><a href="{% url 'curriculum:language_list' %}">Learn a Language</a></li>
           <li class="nav__link"><a href="{% url 'Login:register' %}">Login</a></li>
           <li class="nav__link"><a href="{% url 'Login:login' %}">Sign-up</a></li>
         </ul>
