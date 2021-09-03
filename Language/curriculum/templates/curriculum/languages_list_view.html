@@ -2,8 +2,9 @@
 {% load static %}
 
   {% block content %}
+  <h1>Language list</h1>
 {% for language in languages %}
-<a href =#>{{language.name}}</a><br>
+<a href ="{% url 'curriculum:lesson_list' slug=language.slug%}"> {{language.name}}</a><br>
 {% endfor %}
 
 {% endblock%}

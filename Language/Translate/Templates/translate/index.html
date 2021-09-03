@@ -12,16 +12,18 @@
           <textarea id="text" class="translation__input--text" name="translate"></textarea>
           <div class="translation__input--items">
             <select id="input-language" name="language" required>
-                <option value="Hindi">Hindi</option>
-                <option value="French">French</option>
-                <option value="German">German</option>
-                <option value="Spanish">Spanish</option>
+              <option value="Hi">Hindi</option>
+              <option value="Fr">French</option>
+              <option value="de">German</option>
+              <option value="es">Spanish</option>
             </select>
             <button type="submit">Translate</button>
           </div>
       </form>
-      <div id="output" class="translation__output">
 
+      <div class="translation__output">
+        <p  id="output"></p>
+        <button name="speak" id="speak">click</button>
       </div>
     </div>
   <!-- XXX: http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi -->
@@ -31,6 +33,18 @@
     const text = document.querySelector("#text")
     const inputLanguage = document.querySelector("#input-language")
     const output = document.querySelector("#output")
+    const speaker = document.querySelector("#speak")
+
+    let speech = new SpeechSynthesisUtterance();
+
+
+    console.log(speaker);
+    speaker.addEventListener("click", ()=>{
+      speech.lang = inputLanguage.value
+      console.log("hello");
+      speech.text = output.textContent;
+      window.speechSynthesis.speak(speech)
+    })
 
     function render(data){
       output.innerHTML = ""

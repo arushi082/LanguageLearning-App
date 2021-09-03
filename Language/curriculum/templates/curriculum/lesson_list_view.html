@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block content %}
-{% for lesson in languages.lesson.all %}
-<a href ="{% url 'curriculum:lesson_list' slug = lesson.slug%}">Chapter -{{lesson.position}}: {{lesson.name}}</a><br>
-{% endfor %}
+  <h1>Lesson list</h1>
+
+  {% for lesson in Languages.lessons %}
+    <a href ="{% url 'curriculum:lesson_list' slug=lesson.slug%}">Chapter -{{lesson.position}}: {{lesson.name}}</a><br>
+  {% endfor %}
 
 {% endblock%}
