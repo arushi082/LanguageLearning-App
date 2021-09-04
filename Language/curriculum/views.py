@@ -15,7 +15,7 @@ class LanguagesListView(ListView):
 
 
 class LessonListView(DetailView):
-    context_object_name = 'Lessons'
+    context_object_name = 'lessons'
     model = Languages
     template_name = 'curriculum/lesson_list_view.html'
 
