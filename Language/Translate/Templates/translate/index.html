@@ -1,5 +1,5 @@
 {% extends 'Login/base.html' %}
-
+  {% load static %}
   {% block content %}
 
   <!--CTA-->
@@ -23,7 +23,10 @@
 
       <div class="translation__output">
         <p  id="output"></p>
-        <button name="speak" id="speak">click</button>
+        <div class="translation__output--buttons">
+          <button name="copy" id="copy"><img src="{% static 'Login/image/icon-copy.svg' %}" alt="copy"></button>
+          <button name="speak" id="speak"><img src="{% static 'Login/image/icon-volume.svg' %}" alt="speak"></button>
+        </div>
       </div>
     </div>
   <!-- XXX: http://127.0.0.1:8000/translate/translate/?translate=hello&language=hindi -->
@@ -34,15 +37,19 @@
     const inputLanguage = document.querySelector("#input-language")
     const output = document.querySelector("#output")
     const speaker = document.querySelector("#speak")
+    const copy = document.querySelector("#copy")
 
     let speech = new SpeechSynthesisUtterance();
 
+    copy.addEventListener("click", ()=>{
+      const text = output.textContent
+      var promise = navigator.clipboard.writeText(text)
+    })
 
-    console.log(speaker);
     speaker.addEventListener("click", ()=>{
       speech.lang = inputLanguage.value
       console.log("hello");
-      speech.text = output.textContent;
+      speech.text = output.textContent
       window.speechSynthesis.speak(speech)
     })
 
@@ -51,6 +58,7 @@
       output.innerHTML += `<p>${data}</p>`
     }
 
+    console.log()
     form.addEventListener("submit",async (e)=>{
       console.log(text.value);
       e.preventDefault()
