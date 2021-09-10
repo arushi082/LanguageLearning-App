@@ -75,11 +75,17 @@ header {
   margin-right: 2rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
+  outline: none;
+}
+
+.dictionary__search__box:focus {
+  background-color: #d5d5dd;
 }
 
 .dictionary__search-btn {
   padding: 0.2rem 2rem;
   border-radius: 2rem;
+  background-color: #4747d1;
 }
 
 .dictionary__output {
@@ -90,7 +96,10 @@ header {
   padding: 2rem;
   margin: 2rem;
   border-radius: 1rem;
-  box-shadow: 4px 4px 8px 0 black;
+}
+
+.dictionary__output--result {
+  box-shadow: 5px 5px 11px 6px rgba(26, 26, 26, 0.12);
 }
 
 .dictionary__output--heading {

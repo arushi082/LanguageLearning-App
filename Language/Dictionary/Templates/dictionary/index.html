@@ -23,11 +23,12 @@
   const output = document.querySelector('#output')
 
   function render(data) {
+    output.classList.add("dictionary__output--result")
     output.innerHTML = ""
     const {meaning} = data
-    console.log(meaning)
+    //console.log(meaning)
     const keys = Object.keys(meaning)
-    console.log(Object.keys(meaning))
+    //console.log(Object.keys(meaning))
     keys.forEach((key) => {
       output.innerHTML += `<h2 class="dictionary__output--heading">${key}<h2>`
       meaning[key].forEach((defination) => {

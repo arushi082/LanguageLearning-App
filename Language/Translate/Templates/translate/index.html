@@ -9,7 +9,7 @@
     <div class="translation__box">
       <form id="form" class="translation__input">
           {% csrf_token %}
-          <textarea id="text" class="translation__input--text" name="translate"></textarea>
+          <textarea id="text" class="translation__input--text" name="translate" placeholder="Type here..."></textarea>
           <div class="translation__input--items">
             <select id="input-language" name="language" required>
               <option value="Hi">Hindi</option>
