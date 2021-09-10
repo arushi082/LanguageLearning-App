@@ -1,7 +1,7 @@
 
 
 .dictionary__main{
-  
+
 }
 
 .dictionary__heading{
@@ -20,11 +20,17 @@
   margin-right: 2rem;
   padding: .5rem 1rem;
   border-radius: 1rem;
+  outline: none;
+}
+
+.dictionary__search__box:focus{
+  background-color: hsl(240, 10%, 85%);
 }
 
 .dictionary__search-btn{
   padding: .2rem 2rem;
   border-radius: 2rem;
+  background-color: hsl(240, 60%, 55%);
 }
 
 .dictionary__output{
@@ -35,7 +41,10 @@
   padding: 2rem;
   margin: 2rem;
   border-radius: 1rem;
-  box-shadow: 4px 4px 8px 0 black;
+}
+
+.dictionary__output--result{
+  box-shadow: 5px 5px 11px 6px hsla(0, 0%, 10%, 0.12);
 }
 
 .dictionary__output--heading{

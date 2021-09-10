@@ -2,7 +2,8 @@
   display: flex;
   width: 80%;
   justify-content: center;
-  box-shadow: 10px 10px 19px 0 hsla(0, 0%, 10%, 0.2);
+  box-shadow: 10px 10px 19px 12px hsla(0, 0%, 10%, 0.12);
+  border-radius: .5rem;
 }
 
 .translation__box>*{
@@ -10,7 +11,7 @@
 }
 
 .translation__input{
-  min-height: 300px;
+  min-height: 320px;
   position: relative;
   border-right: solid 4px hsl(0, 0%, 20%);
 }
@@ -32,6 +33,14 @@
   background: none;
 }
 
+.translation__input--items button, select{
+  background-color: hsl(240, 60%, 55%);
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  font-weight: bold;
+}
+
 .translation__input--text{
   width: 100%;
   height: 100%;
@@ -40,8 +49,30 @@
 }
 
 .translation__output{
+  position: relative;
   min-height: 300px;
   text-align: left;
   padding: 0 2rem;
   font-size: 1.2rem;
+}
+
+.translation__output--buttons{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.translation__output--buttons button{
+  background-color: hsl(240, 60%, 55%);
+  padding: .25rem 1rem;
+  border-radius: .25rem;
+  font-weight: bold;
+}
+
+
+.translation__output--buttons button + button{
+  margin-left: .5rem;
 }
