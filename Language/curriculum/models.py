@@ -61,6 +61,7 @@ class Lesson(models.Model):
     position = models.PositiveSmallIntegerField(verbose_name="Chapter no.")
     slug = models.SlugField(null=True, blank=True)
     video = models.CharField(max_length=500, blank=True)
+    description = models.TextField(max_length=500,blank=True)
 
     class Meta:
         ordering = ['position']
