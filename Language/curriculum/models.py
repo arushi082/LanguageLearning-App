@@ -29,7 +29,7 @@ class Subject(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(null=True, blank=True)
     standard = models.ForeignKey(Standard, on_delete=models.CASCADE, related_name='subjects')
-    image = models.ImageField(upload_to=save_subject_image, blank=True, verbose_name='Subject Image')
+    image = models.CharField(max_length=500, blank=True)
     description = models.TextField(max_length=500,blank=True)
 
     def __str__(self):
@@ -60,9 +60,8 @@ class Lesson(models.Model):
     name = models.CharField(max_length=250)
     position = models.PositiveSmallIntegerField(verbose_name="Chapter no.")
     slug = models.SlugField(null=True, blank=True)
-    video = models.FileField(upload_to=save_lesson_files,verbose_name="Video", blank=True, null=True)
-    ppt = models.FileField(upload_to=save_lesson_files,verbose_name="Presentations", blank=True)
-    Notes = models.FileField(upload_to=save_lesson_files,verbose_name="Notes", blank=True)
+    video = models.CharField(max_length=500, blank=True)
+    description = models.TextField(max_length=500,blank=True)
 
     class Meta:
         ordering = ['position']

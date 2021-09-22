@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block content %}
-<p>Created on {{lessons.created_at}} by {{lessons.created_by}}</p><br>
-<p>notes {{lessons.Notes}} and ppt {{lessons.ppt}}}</p>
+<div>
+  <h1>{{lessons.subject}}</h1>
+  <h2>{{lessons.name}}</h2>
+
+  <p>{{lessons.description}}</p>
+  <iframe src="{{lessons.video}}" ></iframe>
+</div>
 
 {% endblock%}
