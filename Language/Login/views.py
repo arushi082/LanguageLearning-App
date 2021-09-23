@@ -1,6 +1,8 @@
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import AuthenticationForm
@@ -8,7 +10,6 @@ from django.contrib.auth.forms import AuthenticationForm
 
 def homepage(request):
     return render(request=request, template_name='Login/home.html')
-
 
 
 def register_request(request):
@@ -41,3 +42,9 @@ def login_request(request):
             messages.error(request, "Invalid username or password.")
     form = AuthenticationForm()
     return render(request=request, template_name="Login/login.html", context={"login_form": form})
+
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('index'))
