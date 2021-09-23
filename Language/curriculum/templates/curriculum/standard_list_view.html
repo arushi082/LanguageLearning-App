@@ -2,11 +2,16 @@
 
 
 {% block content %}
-{%for standard in standards %}
-<div>
-  <a href = "{% url 'curriculum:subject_list' slug=standard.slug %}">{{standard.name}}</a><br>
-  <p>{{standard.description}}</p>
-</div>
-{% endfor %}
+
+  <div class="standard_list_container">
+    {%for standard in standards %}
+    <div class="standard_list_block">
+      <h2>
+        <a href = "{% url 'curriculum:subject_list' slug=standard.slug %}">{{standard.name}}</a>
+      </h2>
+      <p>{{standard.description}}</p>
+    </div>
+    {% endfor %}
+  </div>
 
 {% endblock%}

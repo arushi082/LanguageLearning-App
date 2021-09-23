@@ -2,10 +2,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import NewUserForm
-from django.contrib.auth import login, logout
 from django.contrib import messages
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.urls import reverse
 
 
 def homepage(request):
@@ -47,4 +47,4 @@ def login_request(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    return redirect("Login:homepage")

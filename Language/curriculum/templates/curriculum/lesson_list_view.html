@@ -2,15 +2,21 @@
 {% load static %}
 
 {% block content %}
-  <h1>Lesson list</h1>
+  <main class="lesson_list">
+    <h1>Lesson list</h1>
 
-{% for lesson in subjects.lessons.all %}
-  <div>
-    <a href ="{% url 'curriculum:lesson_detail' slug=lesson.slug subject=subjects.slug standard=lesson.Standard.slug %}">
-      Chapter-{{lesson.position}}: {{lesson.name}}
-    </a>
-    <p>{{lesson.description}}</p>
-  </div>
-{% endfor %}
+    <div class="lesson_list_container">
+
+      {% for lesson in subjects.lessons.all %}
+        <div class="lesson_list_block">
+          <h2><a href ="{% url 'curriculum:lesson_detail' slug=lesson.slug subject=subjects.slug standard=lesson.Standard.slug %}">
+            Chapter-{{lesson.position}}: {{lesson.name}}
+          </a></h2>
+          <p>{{lesson.description}}</p>
+        </div>
+      {% endfor %}
+      
+    </div>
+  </main>
 
 {% endblock%}
