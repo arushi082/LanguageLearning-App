@@ -22,10 +22,12 @@ img{
 
 a{
  color: inherit;
+ display: inline-block;
+ text-decoration: none;
 }
 
 a:hover{
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 ul{
@@ -36,6 +38,10 @@ ul{
 
 li + li{
   padding-left: 1rem;
+}
+
+button, select{
+  cursor: pointer;
 }
 
 .wrapper{

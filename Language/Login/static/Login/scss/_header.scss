@@ -1,11 +1,36 @@
 header{
   width: 80%;
-  margin: auto;
+  margin: 1rem auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo {
+  a{
+    color: hsl(240, 60%, 45%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -1px;
+    transition: all 0.3s linear;
+    &:hover{
+      transform: scale(1.05);
+    }
+    &:active{
+      transform: scale(0.95);
+    }
+  }
+}
+
 .nav__link + .nav__link{
   margin-left: 1rem;
+}
+
+.nav__link{
+  font-weight: 550;
+  letter-spacing: 1px;
+  &:hover{
+    font-weight: bold;
+  }
 }

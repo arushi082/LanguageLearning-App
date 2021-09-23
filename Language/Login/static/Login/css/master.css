@@ -22,10 +22,12 @@ img {
 
 a {
   color: inherit;
+  display: inline-block;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 ul {
@@ -36,6 +38,10 @@ ul {
 
 li + li {
   padding-left: 1rem;
+}
+
+button, select {
+  cursor: pointer;
 }
 
 .wrapper {
@@ -49,14 +55,37 @@ li + li {
 
 header {
   width: 80%;
-  margin: auto;
+  margin: 1rem auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.logo a {
+  color: #2e2eb8;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -1px;
+  transition: all 0.3s linear;
+}
+.logo a:hover {
+  transform: scale(1.05);
+}
+.logo a:active {
+  transform: scale(0.95);
+}
+
 .nav__link + .nav__link {
   margin-left: 1rem;
+}
+
+.nav__link {
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+.nav__link:hover {
+  font-weight: bold;
 }
 
 .dictionary__heading {
@@ -181,6 +210,66 @@ header {
 
 .translation__output--buttons button + button {
   margin-left: 0.5rem;
+}
+
+.login__register {
+  background: rgba(26, 26, 26, 0.08);
+  margin: 4rem auto;
+  max-width: 400px;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+}
+.login__register h1 {
+  text-align: center;
+}
+.login__register label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+.login__register input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  width: 80%;
+}
+.login__register input:focus {
+  outline: solid 2px #7070db;
+}
+.login__register .asteriskField {
+  font-size: 0.8rem;
+}
+.login__register .help-block {
+  display: none;
+}
+.login__register ul {
+  display: none;
+}
+.login__register button {
+  padding: 0.75rem 2rem;
+  margin: 1rem auto;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  background-color: #4747d1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.login__register button:hover {
+  background-color: #7070db;
+}
+.login__register button:active {
+  transform: scale(0.95);
+}
+.login__register p {
+  text-align: center;
+}
+.login__register p a {
+  color: #4747d1;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=master.css.map */
