@@ -1,0 +1,67 @@
+.login__register{
+  background: hsla(0, 0%, 10%, 0.08);
+  margin: 4rem auto;
+  max-width: 400px;
+  padding: 2rem 4rem;
+  border-radius: .5rem;
+
+  & h1{
+    text-align: center;
+  }
+
+  & label{
+    display: inline-block;
+    margin-top: .5rem;
+    font-weight: bold;
+  }
+
+  & input{
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    outline: none;
+    border: none;
+    width: 80%;
+  }
+
+  & input:focus{
+    outline: solid 2px hsl(240, 60%, 65%);
+  }
+
+  & .asteriskField{
+    font-size: .8rem;
+  }
+
+  & .help-block{
+    display: none;
+  }
+
+  & ul{
+    display: none;
+  }
+
+  & button{
+    padding: .75rem 2rem;
+    margin: 1rem auto;
+    border-radius: .25rem;
+    outline: none;
+    border: none;
+    background-color: hsl(240, 60%, 55%);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  & button:hover{
+    background-color: hsl(240, 60%, 65%);
+  }
+  & button:active{
+    transform: scale(0.95);
+  }
+  & p{
+    text-align: center;
+    & a{
+      color: hsl(240, 60%, 55%);
+      font-weight: bold;
+    }
+  }
+}
