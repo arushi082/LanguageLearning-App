@@ -25,27 +25,13 @@
           <li class="nav__link"><a href="{% url 'Dictionary:index' %}">Dictionary</a></li>
           <li class="nav__link"><a href="{% url 'Translate:index' %}">Translation</a></li>
           <li class="nav__link"><a href="{% url 'curriculum:standard_list' %}">Learn a Language</a></li>
-                {% if user.is_authenticated %}
-                    {% if request.user|has_group:"admin_owner" %}
-                        <li>
-                            <form class="logout-link" action="{% url 'login:logout' %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="mr-5 text-light">Logout</button>
-                            </form>
-                        </li>
-                    {% else %}
-                        <li  class="mr-5 text-light"> {{user.username}}</li>
-                        <li>
-                            <form class="logout-link" action="{% url 'login:logout' %}" method="post">
-                                {% csrf_token %}
-                                <button type="submit" class="mr-5 text-light">Logout</button>
-                            </form>
-                        </li>
-                    {% endif %}
-
-                {% else %}
-          <li class="nav__link"><a href="{% url 'Login:register' %}">Login</a></li>
-          <li class="nav__link"><a href="{% url 'Login:login' %}">Sign-up</a></li>
+          {% if user.is_authenticated %}
+            <li  class="mr-5 text-light"> {{user.username}}</li>
+            <li class="nav__link"><a href="{% url 'Login:logout' %}">Log out</a></li>
+          {% else %}
+            <li class="nav__link"><a href="{% url 'Login:register' %}">Login</a></li>
+            <li class="nav__link"><a href="{% url 'Login:login' %}">Sign-up</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
