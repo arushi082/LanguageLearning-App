@@ -219,7 +219,7 @@ header {
   max-width: 400px;
   padding: 2rem 4rem;
   border-radius: 0 0.5rem 0.5rem;
-  box-shadow: 0 2px 8px #1f1f1f;
+  box-shadow: 4px 2px 8px rgba(26, 26, 26, 0.3);
 }
 .login__register h1 {
   text-align: center;
@@ -276,13 +276,13 @@ header {
 
 .standard-list, .lesson-list, .subject-list {
   text-align: center;
+  width: 80%;
+  margin: 2rem auto;
 }
 .standard-list__container, .lesson-list__container, .subject-list__container {
   text-align: left;
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
-  margin: 2rem auto;
 }
 .standard-list__block, .lesson-list__block, .subject-list__block {
   max-width: 300px;
@@ -291,6 +291,7 @@ header {
   margin: 0 2rem 2rem 0;
   padding: 1rem;
   border-radius: 0 0.5rem 0.5rem;
+  box-shadow: 4px 2px 8px rgba(26, 26, 26, 0.3);
   transition: 0.3s linear all;
 }
 .standard-list__block:hover, .lesson-list__block:hover, .subject-list__block:hover {
@@ -311,7 +312,7 @@ header {
 }
 
 .lesson-list__container {
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=master.css.map */

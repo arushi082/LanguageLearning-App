@@ -1,11 +1,11 @@
 .standard-list, .lesson-list, .subject-list{
   text-align: center;
+  width: 80%;
+  margin: 2rem auto;
   &__container{
     text-align: left;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 2rem auto;
   }
 
   &__block{
@@ -16,7 +16,9 @@
     margin: 0 2rem 2rem 0;
     padding: 1rem;
     border-radius: 0 .5rem .5rem;
+    box-shadow: 4px 2px 8px hsla(0, 0%, 10%, .3);
     transition: 0.3s linear all;
+
     &:hover{
       transform: scale(1.05);
     }
@@ -43,6 +45,6 @@
 
 .lesson-list{
   &__container{
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
