@@ -213,11 +213,13 @@ header {
 }
 
 .login__register {
-  background: rgba(26, 26, 26, 0.08);
+  background-color: rgba(26, 26, 26, 0.08);
+  background: linear-gradient(135deg, #4747d1 0px, #4747d1 20px, rgba(26, 26, 26, 0.08) 20px, rgba(26, 26, 26, 0.08) 40px, #4747d1 40px, #4747d1 60px, rgba(26, 26, 26, 0.08) 60px);
   margin: 4rem auto;
   max-width: 400px;
   padding: 2rem 4rem;
-  border-radius: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem;
+  box-shadow: 4px 2px 8px rgba(26, 26, 26, 0.3);
 }
 .login__register h1 {
   text-align: center;
@@ -270,6 +272,47 @@ header {
 .login__register p a {
   color: #4747d1;
   font-weight: bold;
+}
+
+.standard-list, .lesson-list, .subject-list {
+  text-align: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+.standard-list__container, .lesson-list__container, .subject-list__container {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+.standard-list__block, .lesson-list__block, .subject-list__block {
+  max-width: 300px;
+  background-color: rgba(26, 26, 26, 0.08);
+  background: linear-gradient(135deg, #4747d1 0px, #4747d1 20px, rgba(26, 26, 26, 0.08) 20px);
+  margin: 0 2rem 2rem 0;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem;
+  box-shadow: 4px 2px 8px rgba(26, 26, 26, 0.3);
+  transition: 0.3s linear all;
+}
+.standard-list__block:hover, .lesson-list__block:hover, .subject-list__block:hover {
+  transform: scale(1.05);
+}
+.standard-list__block:active, .lesson-list__block:active, .subject-list__block:active {
+  transform: scale(0.95);
+}
+.standard-list__block a, .lesson-list__block a, .subject-list__block a {
+  text-decoration: none;
+}
+.standard-list__block h2, .lesson-list__block h2, .subject-list__block h2 {
+  color: #4747d1;
+}
+.standard-list__block p, .lesson-list__block p, .subject-list__block p {
+  line-height: 1.5;
+  color: #0c0c1d;
+}
+
+.lesson-list__container {
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=master.css.map */
