@@ -1,0 +1,48 @@
+.standard-list, .lesson-list, .subject-list{
+  text-align: center;
+  &__container{
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  &__block{
+    max-width: 300px;
+    background-color: hsla(0, 0%, 10%, 0.08);
+    background: linear-gradient(135deg, hsla(240,60%,55%,1) 0px,
+      hsla(240,60%,55%,1) 20px, hsla(0, 0%, 10%, 0.08) 20px,);
+    margin: 0 2rem 2rem 0;
+    padding: 1rem;
+    border-radius: 0 .5rem .5rem;
+    transition: 0.3s linear all;
+    &:hover{
+      transform: scale(1.05);
+    }
+    &:active{
+      transform: scale(0.95);
+    }
+
+    & a{
+      text-decoration: none;
+    }
+
+    & h2{
+      color: hsl(240,60%,55%);
+    }
+
+    & p{
+      line-height: 1.5;
+      color: hsl(240,40%,8%);
+    }
+
+
+  }
+}
+
+.lesson-list{
+  &__container{
+    justify-content: space-between;
+  }
+}
