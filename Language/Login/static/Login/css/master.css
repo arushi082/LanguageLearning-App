@@ -124,15 +124,19 @@ header {
   text-align: left;
   padding: 2rem;
   margin: 2rem;
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem;
 }
 
 .dictionary__output--result {
   box-shadow: 5px 5px 11px 6px rgba(26, 26, 26, 0.12);
+  background: linear-gradient(135deg, #4747d1 0px, #4747d1 25px, white 25px);
 }
 
 .dictionary__output--heading {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #4747d1;
+}
+.dictionary__output--heading span {
+  color: #4747d1;
 }
 
 .translation__box {
