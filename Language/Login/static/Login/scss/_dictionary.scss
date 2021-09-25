@@ -40,13 +40,18 @@
   text-align: left;
   padding: 2rem;
   margin: 2rem;
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem;
 }
 
 .dictionary__output--result{
   box-shadow: 5px 5px 11px 6px hsla(0, 0%, 10%, 0.12);
+  background: linear-gradient(135deg, hsl(240, 60%, 55%) 0px,
+    hsl(240, 60%, 55%) 25px, hsl(0, 0%, 100%) 25px);
 }
 
 .dictionary__output--heading{
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid hsl(240, 60%, 55%);
+  & span{
+    color: hsl(240, 60%, 55%);
+  }
 }
