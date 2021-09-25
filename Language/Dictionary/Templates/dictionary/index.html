@@ -30,7 +30,10 @@
     const keys = Object.keys(meaning)
     //console.log(Object.keys(meaning))
     keys.forEach((key) => {
-      output.innerHTML += `<h2 class="dictionary__output--heading">${key}<h2>`
+      output.innerHTML += `<h2 class="dictionary__output--heading">
+          <span>${word.value.toUpperCase()}</span>
+          ~ ${key}
+        </h2>`
       meaning[key].forEach((defination) => {
         output.innerHTML += `<p>${defination}</p>`
       });
