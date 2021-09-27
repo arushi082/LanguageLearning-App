@@ -96,7 +96,7 @@ header {
   color: white;
 }
 .home__hero {
-  height: min(600px, 100vh);
+  min-height: max(600px, 90vh);
   text-align: center;
   display: grid;
   justify-content: center;
