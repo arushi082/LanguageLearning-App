@@ -1,0 +1,31 @@
+.home{
+
+  &__btn{
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background-color: hsl(240,60%,55%);
+    border-radius: .25rem;
+    color: white;
+  }
+
+  &__hero{
+    height: min(600px, 100vh);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    & h1{
+      font-size: calc(2rem + 2vw);
+      font-weight: bolder;
+      letter-spacing: -2px;
+      color: hsl(240,60%,45%);
+    }
+    & p{
+      font-size: calc(1rem + .5vw);
+      max-width: 700px;
+      margin: 2rem auto;
+    }
+  }
+}
