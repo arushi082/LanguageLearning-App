@@ -3,33 +3,41 @@
   {% block content %}
 
   <!--CTA-->
-  <main>
+  <main class="home">
 
-    <section>
-      <h1>Making Easier Learning languages</h1>
-      <p>Expand your vocabulary with
-      finding meaning of words
-      translating sentences into different
-      languages.</p>
-      <a href="#">Explore More</a>
+    <section class="home__hero">
+      <div>
+        <h1>Making Easier Learning languages</h1>
+        <p>
+          Learn new Languages or
+          Expand your vocabulary with
+          finding meaning of words,
+          translating sentences into different
+          languages, .
+        </p>
+        <div>
+          <a class="home__btn" href="{% url 'Login:login' %}">Login</a>
+          <a class="home__btn" href="{% url 'Login:register' %}">Sign-up</a>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <section class="home__word">
       <p>Build your vocabulary with
       Searching meaning of different
       words </p>
-      <a href="#">Search A Word</a>
+      <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
     </section>
 
-    <section>
+    <section class="home__translate">
       <p>Translate word, sentences and pharses
       between Engkish and over languages</p>
-      <a href="#">Something in mind to translate -></a>
+      <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
     </section>
 
-    <section>
+    <section class="home__learn">
       <h1>Learn A new Language</h1>
-      <a href="#">Start tody</a>
+      <a class="home__btn" href="{% url 'curriculum:standard_list' %}">Start tody</a>
     </section>
   </main>
   {% endblock %}
