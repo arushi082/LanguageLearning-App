@@ -59,6 +59,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: solid 2px rgba(46, 46, 184, 0.2);
+  padding: 0 1rem;
 }
 
 .logo a {
@@ -86,14 +88,26 @@ header {
 }
 .nav__link:hover {
   font-weight: bold;
+  color: #2e2eb8;
 }
 
 .home__btn {
   margin: 1rem;
-  padding: 1rem 2rem;
-  background-color: #4747d1;
-  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
   color: white;
+  background-color: #4747d1;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.5);
+  transition: all 0.2s linear;
+}
+.home__btn:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 5px 12px rgba(26, 26, 26, 0.5);
+  text-decoration: none;
+}
+.home__btn:active {
+  transform: scale(0.95) translateY(-0.25rem);
 }
 .home__hero {
   min-height: max(600px, 90vh);
@@ -113,6 +127,50 @@ header {
   font-size: calc(1rem + 0.5vw);
   max-width: 700px;
   margin: 2rem auto;
+}
+.home__word {
+  width: 80%;
+  margin: 4rem auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__word__content {
+  text-align: center;
+  margin: 1rem;
+}
+.home__word__content p {
+  font-size: calc(1.2rem + 0.5vw);
+}
+.home__word img {
+  filter: drop-shadow(0 0 4px #4747d1);
+}
+.home__translate {
+  width: 80%;
+  margin: 4rem auto;
+}
+.home__translate__content {
+  text-align: center;
+  margin: 2rem auto;
+}
+.home__translate__content p {
+  font-size: calc(1.2rem + 0.5vw);
+  max-width: 700px;
+  margin: 1rem auto;
+}
+.home__translate img {
+  filter: drop-shadow(0 0 4px #4747d1);
+}
+.home__learn {
+  background: #ebebfa;
+  color: #4747d1;
+  text-align: center;
+  margin: 4rem auto 0;
+  padding: 2rem;
+}
+.home__learn h1 {
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: bold;
 }
 
 .dictionary__heading {
@@ -163,6 +221,7 @@ header {
   border-bottom: 2px solid #4747d1;
 }
 .dictionary__output--heading span {
+  text-transform: capitalize;
   color: #4747d1;
 }
 
