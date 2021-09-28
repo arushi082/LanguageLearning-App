@@ -28,16 +28,61 @@
     align-items: center;
     margin: 0 1rem;
 
-    & h1{
+    h1{
       font-size: calc(2rem + 2vw);
       font-weight: bolder;
       letter-spacing: -2px;
       color: hsl(240,60%,45%);
     }
-    & p{
+    p{
       font-size: calc(1rem + .5vw);
       max-width: 700px;
       margin: 2rem auto;
+    }
+  }
+
+  &__word{
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content{
+      text-align: center;
+      p{
+        font-size: calc(1.2rem + .5vw);
+      }
+    }
+     img{
+      filter: drop-shadow(0 0 4px hsl(240, 60%, 55%)) ;
+    }
+  }
+
+  &__translate{
+    width: 80%;
+    margin: 4rem auto;
+    &__content{
+      text-align: center;
+      p{
+        font-size: calc(1.2rem + .5vw);
+        max-width: 700px;
+        margin: 2rem auto 0;
+      }
+    }
+    img{
+     filter: drop-shadow(0 0 4px hsl(240, 60%, 55%)) ;
+   }
+  }
+
+  &__learn{
+    background:hsl(240, 60%, 95%);
+    color: hsl(240, 60%, 55%);
+    text-align: center;
+    margin: 4rem auto 0;
+    padding: 2rem;
+    h1{
+      font-size: calc(1.5rem + .5vw);
+      font-weight: bold;
     }
   }
 }

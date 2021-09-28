@@ -59,7 +59,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  border-bottom: solid 2px rgba(46, 46, 184, 0.2);
   padding: 0 1rem;
 }
 
@@ -128,6 +128,48 @@ header {
   max-width: 700px;
   margin: 2rem auto;
 }
+.home__word {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home__word__content {
+  text-align: center;
+}
+.home__word__content p {
+  font-size: calc(1.2rem + 0.5vw);
+}
+.home__word img {
+  filter: drop-shadow(0 0 4px #4747d1);
+}
+.home__translate {
+  width: 80%;
+  margin: 4rem auto;
+}
+.home__translate__content {
+  text-align: center;
+}
+.home__translate__content p {
+  font-size: calc(1.2rem + 0.5vw);
+  max-width: 700px;
+  margin: 2rem auto 0;
+}
+.home__translate img {
+  filter: drop-shadow(0 0 4px #4747d1);
+}
+.home__learn {
+  background: #ebebfa;
+  color: #4747d1;
+  text-align: center;
+  margin: 4rem auto 0;
+  padding: 2rem;
+}
+.home__learn h1 {
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: bold;
+}
 
 .dictionary__heading {
   font-size: 3rem;
@@ -177,6 +219,7 @@ header {
   border-bottom: 2px solid #4747d1;
 }
 .dictionary__output--heading span {
+  text-transform: capitalize;
   color: #4747d1;
 }
 

@@ -1,10 +1,14 @@
 {% extends 'Login/base.html' %}
+{% load static %}
 
   {% block content %}
 
   <!--CTA-->
   <main class="home">
 
+    {% if user.is_authenticated %}
+
+    {% else %}
     <section class="home__hero">
       <div>
         <h1>Making Easier Learning languages</h1>
@@ -21,16 +25,18 @@
         </div>
       </div>
     </section>
+    {% endif %}
+
 
     <section class="home__word">
       <div class="home__word__content">
-        <p>Build your vocabulary with
+        <p>Build your vocabulary by
         Searching meaning of different
         words </p>
         <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
       </div>
       <div>
-        <img src="" alt="">
+        <img src="{% static 'Login/image/dictionary.png' %}" alt="">
       </div>
     </section>
 
@@ -41,12 +47,12 @@
         <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
       </div>
       <div>
-        <img src="" alt="">
+        <img src="{% static 'Login/image/translate.png' %}" alt="">
       </div>
     </section>
 
     <section class="home__learn">
-      <h1>Learn A new Language</h1>
+      <h1>wanna Learn A new Language</h1>
       <a class="home__btn" href="{% url 'curriculum:standard_list' %}">Start tody</a>
     </section>
   </main>
