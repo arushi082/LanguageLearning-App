@@ -59,6 +59,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  padding: 0 1rem;
 }
 
 .logo a {
@@ -86,14 +88,26 @@ header {
 }
 .nav__link:hover {
   font-weight: bold;
+  color: #2e2eb8;
 }
 
 .home__btn {
   margin: 1rem;
-  padding: 1rem 2rem;
-  background-color: #4747d1;
-  border-radius: 0.25rem;
+  padding: 1rem 3rem;
+  border-radius: 1.5rem;
   color: white;
+  background-color: #4747d1;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.5);
+  transition: all 0.2s linear;
+}
+.home__btn:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 5px 12px rgba(26, 26, 26, 0.5);
+  text-decoration: none;
+}
+.home__btn:active {
+  transform: scale(0.95) translateY(-0.25rem);
 }
 .home__hero {
   min-height: max(600px, 90vh);

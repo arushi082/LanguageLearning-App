@@ -2,10 +2,22 @@
 
   &__btn{
     margin: 1rem;
-    padding: 1rem 2rem;
-    background-color: hsl(240,60%,55%);
-    border-radius: .25rem;
+    padding: 1rem 3rem;
+    border-radius: 1.5rem;
     color: white;
+    background-color: hsl(240,60%,55%);
+    font-weight: bold;
+    box-shadow: 0 2px 8px hsla(0, 0%, 10%, 0.5);
+    transition: all 0.2s linear;
+    &:hover{
+      transform: translateY(-0.5rem);
+      box-shadow: 0 5px 12px hsla(0, 0%, 10%, 0.5);
+      text-decoration: none;
+    }
+    &:active{
+      transform: scale(0.95) translateY(-0.25rem);
+    }
+
   }
 
   &__hero{

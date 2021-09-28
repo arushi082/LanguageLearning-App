@@ -15,7 +15,7 @@
           translating sentences into different
           languages, .
         </p>
-        <div>
+        <div class="home__hero__btns">
           <a class="home__btn" href="{% url 'Login:login' %}">Login</a>
           <a class="home__btn" href="{% url 'Login:register' %}">Sign-up</a>
         </div>
@@ -23,16 +23,26 @@
     </section>
 
     <section class="home__word">
-      <p>Build your vocabulary with
-      Searching meaning of different
-      words </p>
-      <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
+      <div class="home__word__content">
+        <p>Build your vocabulary with
+        Searching meaning of different
+        words </p>
+        <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
     </section>
 
     <section class="home__translate">
-      <p>Translate word, sentences and pharses
-      between Engkish and over languages</p>
-      <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
+      <div class="home__translate__content">
+        <p>Translate word, sentences and pharses
+        between Engkish and over languages</p>
+        <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
+      </div>
+      <div>
+        <img src="" alt="">
+      </div>
     </section>
 
     <section class="home__learn">
