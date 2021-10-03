@@ -11,7 +11,7 @@
     {% else %}
     <section class="home__hero">
       <div>
-        <h1>Making Easier Learning languages</h1>
+        <h1>Making Learning Easier</h1>
         <p>
           Learn new Languages or
           Expand your vocabulary with
@@ -33,7 +33,11 @@
         <p>Build your vocabulary by
         Searching meaning of different
         words </p>
-        <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
+        {% if user.is_authenticated %}
+          <a class="home__btn" href="{% url 'Dictionary:index' %}">Search A Word</a>
+        {% else %}
+          <a class="home__btn" href="{% url 'Login:login' %}">Search A Word</a>
+        {% endif %}
       </div>
       <div>
         <img src="{% static 'Login/image/dictionary.png' %}" alt="">
@@ -43,8 +47,13 @@
     <section class="home__translate">
       <div class="home__translate__content">
         <p>Translate word, sentences and pharses
-        between Engkish and over languages</p>
-        <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
+        between English and other languages</p>
+
+        {% if user.is_authenticated %}
+          <a class="home__btn" href="{% url 'Translate:index' %}">Something in mind to translate -></a>
+        {% else %}
+          <a class="home__btn" href="{% url 'Login:login' %}">Something in mind to translate -></a>
+        {% endif %}
       </div>
       <div>
         <img src="{% static 'Login/image/translate.png' %}" alt="">
@@ -52,8 +61,12 @@
     </section>
 
     <section class="home__learn">
-      <h1>wanna Learn A new Language</h1>
-      <a class="home__btn" href="{% url 'curriculum:standard_list' %}">Start tody</a>
+      <h1>want to Learn A new Language</h1>
+      {% if user.is_authenticated %}
+        <a class="home__btn" href="{% url 'curriculum:standard_list' %}">Start today</a>
+      {% else %}
+        <a class="home__btn" href="{% url 'Login:login' %}">Start today</a>
+      {% endif %}
     </section>
   </main>
   {% endblock %}

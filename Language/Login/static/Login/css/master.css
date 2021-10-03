@@ -310,6 +310,27 @@ header {
   padding: 2rem 4rem;
   border-radius: 0 0.5rem 0.5rem;
   box-shadow: 4px 2px 8px rgba(26, 26, 26, 0.3);
+  position: relative;
+  /*
+  & ul{
+  position: absolute;
+  display: block;
+  left: -100%;
+  top: -50px;
+  max-width: 300px;
+  background: hsla(240, 60%, 65%, 0.9);
+  padding: 1.5rem;
+  color: white;
+  list-style: initial;
+  border-radius: .5rem;
+
+  li{
+  padding: none;
+  margin: auto;
+  }
+  }
+
+  */
 }
 .login__register h1 {
   text-align: center;
@@ -332,10 +353,7 @@ header {
 .login__register .asteriskField {
   font-size: 0.8rem;
 }
-.login__register .help-block {
-  display: none;
-}
-.login__register ul {
+.login__register .help-block, .login__register ul {
   display: none;
 }
 .login__register button {
@@ -403,6 +421,27 @@ header {
 
 .lesson-list__container {
   justify-content: space-around;
+}
+
+.lesson-detail {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.lesson-detail h1 {
+  font-size: calc(2rem + 0.5vh);
+  font-weight: bold;
+  color: #4747d1;
+}
+.lesson-detail p {
+  line-height: 1.5;
+  padding: 1rem 2rem;
+}
+.lesson-detail__video {
+  max-width: 672px;
+  width: 100%;
+  height: 378px;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=master.css.map */
