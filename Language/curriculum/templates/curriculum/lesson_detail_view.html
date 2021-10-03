@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block content %}
-<div class="lesson_detail">
+<div class="lesson-detail">
   <h1>{{lessons.subject}}</h1>
   <h2>{{lessons.name}}</h2>
 
   <p>{{lessons.description}}</p>
-  <iframe src="{{lessons.video}}" class="lesson_detail_video"></iframe>
+  <iframe src="{{lessons.video}}" class="lesson-detail__video" allow="accelerometer" allowfullscreen></iframe>
 </div>
 
 {% endblock%}
