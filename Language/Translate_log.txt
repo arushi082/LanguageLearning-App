@@ -1,0 +1,2 @@
+2021-10-06/12:19:53: Info :		Initiating Translation app
+2021-10-06/12:20:20: Info :		Translates words or sentences into diff languages using translate library
