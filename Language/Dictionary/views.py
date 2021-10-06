@@ -37,6 +37,8 @@ def dictionary(request):
         logger.log(file_object, 'Searches for meaning Synonmys and Antonyms', 'Info')
         file_object.close()
         return JsonResponse(context)
+        logger.log(file_object, 'Prints Meaning of searched word', 'Info')
+        file_object.close()
     except Exception as e:
         logger.log(
             file_object,
