@@ -1,0 +1,2 @@
+2021-10-06/12:05:57: Info :		Initiating app
+2021-10-06/12:06:23: Info :		Searches for meaning Synonmys and Antonyms
