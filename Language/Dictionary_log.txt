@@ -1,2 +1,9 @@
 2021-10-06/12:05:57: Info :		Initiating app
 2021-10-06/12:06:23: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-15/22:02:38: Info :		Initiating app
+2021-10-16/00:24:01: Info :		Initiating app
+2021-10-16/13:18:47: Info :		Initiating app
+2021-10-16/13:20:45: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-16/13:21:07: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-16/13:21:28: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-16/13:21:37: Info :		Searches for meaning Synonmys and Antonyms

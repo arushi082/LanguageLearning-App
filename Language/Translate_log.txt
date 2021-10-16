@@ -1,2 +1,34 @@
 2021-10-06/12:19:53: Info :		Initiating Translation app
 2021-10-06/12:20:20: Info :		Translates words or sentences into diff languages using translate library
+2021-10-15/22:02:12: Info :		Initiating Translation app
+2021-10-15/22:02:43: Info :		Initiating Translation app
+2021-10-15/22:04:02: Info :		Initiating Translation app
+2021-10-15/22:07:23: Info :		Initiating Translation app
+2021-10-15/22:13:24: Info :		Initiating Translation app
+2021-10-15/22:14:25: Info :		Initiating Translation app
+2021-10-15/22:15:01: Info :		Translates words or sentences into diff languages using translate library
+2021-10-15/22:15:48: Info :		Initiating Translation app
+2021-10-15/22:16:39: Info :		Initiating Translation app
+2021-10-15/22:17:30: Info :		Initiating Translation app
+2021-10-15/22:17:50: Info :		Translates words or sentences into diff languages using translate library
+2021-10-15/22:18:03: Info :		Translates words or sentences into diff languages using translate library
+2021-10-15/22:18:42: Info :		Initiating Translation app
+2021-10-15/22:18:52: Info :		Translates words or sentences into diff languages using translate library
+2021-10-15/22:19:13: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:18:17: Info :		Initiating Translation app
+2021-10-16/00:18:30: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:19:07: Info :		Initiating Translation app
+2021-10-16/00:19:20: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:19:41: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:21:10: Info :		Initiating Translation app
+2021-10-16/00:21:20: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:22:13: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:22:35: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:25:33: Info :		Initiating Translation app
+2021-10-16/00:25:47: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:26:00: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:26:15: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/00:26:20: Info :		Translates words or sentences into diff languages using translate library
+2021-10-16/13:18:41: Info :		Initiating Translation app
+2021-10-16/13:20:17: Info :		Initiating Translation app
+2021-10-16/13:20:28: Info :		Translates words or sentences into diff languages using translate library
