@@ -47,3 +47,7 @@
 2021-10-22/12:40:49: Info :		Translates words or sentences into diff languages using translate library
 2021-10-22/12:41:28: Info :		Initiating Translation app
 2021-10-22/12:41:37: Info :		Translates words or sentences into diff languages using translate library
+2021-10-22/17:12:07: Info :		Initiating Translation app
+2021-10-22/17:12:16: Info :		Translates words or sentences into diff languages using translate library
+2021-10-22/17:12:34: Info :		Translates words or sentences into diff languages using translate library
+2021-10-22/17:12:46: Info :		Translates words or sentences into diff languages using translate library

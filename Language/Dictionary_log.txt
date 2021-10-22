@@ -38,3 +38,24 @@
 2021-10-22/12:42:11: Info :		Prints Meaning of searched word
 2021-10-22/12:42:16: Info :		Searches for meaning Synonmys and Antonyms
 2021-10-22/12:42:16: Info :		Prints Meaning of searched word
+2021-10-22/17:07:32: Info :		Initiating app
+2021-10-22/17:07:52: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:07:52: Info :		Prints Meaning of searched word
+2021-10-22/17:08:02: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:08:02: Info :		Prints Meaning of searched word
+2021-10-22/17:08:09: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:08:09: Info :		Prints Meaning of searched word
+2021-10-22/17:08:14: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:08:14: Info :		Prints Meaning of searched word
+2021-10-22/17:09:15: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:09:15: Info :		Prints Meaning of searched word
+2021-10-22/17:09:33: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:09:33: Info :		Prints Meaning of searched word
+2021-10-22/17:10:11: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:10:11: Info :		Prints Meaning of searched word
+2021-10-22/17:10:14: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:10:14: Info :		Prints Meaning of searched word
+2021-10-22/17:10:29: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:10:29: Info :		Prints Meaning of searched word
+2021-10-22/17:11:26: Info :		Searches for meaning Synonmys and Antonyms
+2021-10-22/17:11:26: Info :		Prints Meaning of searched word

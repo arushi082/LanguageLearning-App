@@ -23,6 +23,8 @@ def dictionary(request):
     :return: html
     """
     try:
+        file_object = open("Dictionary_log.txt", 'a+')
+        logger.log(file_object, 'Searches for meaning Synonmys and Antonyms', 'Info')
         search = request.GET.get('search')
         inLang = request.GET.get('inlang')
         translator= Translator(to_lang='En' ,from_lang = inLang)
@@ -33,7 +35,7 @@ def dictionary(request):
         synonyms = dictionary.synonym(translation)
         antonyms = dictionary.antonym(translation)
 
-        file_object = open("Dictionary_log.txt", 'a+')
+
         logger.log(file_object, 'Searches for meaning Synonmys and Antonyms', 'Info')
         file_object.close()
 
