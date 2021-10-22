@@ -12,6 +12,7 @@
           <textarea id="text" class="translation__input--text" name="translate" placeholder="Type here..."></textarea>
           <div class="translation__input--items">
             <select id="input-language" name="language" required>
+              <option value="En">English</option>
               <option value="Hi">Hindi</option>
               <option value="Fr">French</option>
               <option value="de">German</option>
@@ -24,6 +25,13 @@
       <div class="translation__output">
         <p  id="output"></p>
         <div class="translation__output--buttons">
+          <select id="output-language" name="language" required>
+            <option value="En">English</option>
+            <option value="Hi">Hindi</option>
+            <option value="Fr">French</option>
+            <option value="de">German</option>
+            <option value="es">Spanish</option>
+          </select>
           <button name="copy" id="copy"><img src="{% static 'Login/image/icon-copy.svg' %}" alt="copy"></button>
           <button name="speak" id="speak"><img src="{% static 'Login/image/icon-volume.svg' %}" alt="speak"></button>
         </div>
@@ -35,9 +43,11 @@
     const form = document.querySelector("#form")
     const text = document.querySelector("#text")
     const inputLanguage = document.querySelector("#input-language")
+    const outputLanguage = document.querySelector("#output-language")
     const output = document.querySelector("#output")
     const speaker = document.querySelector("#speak")
     const copy = document.querySelector("#copy")
+    const url = "http://127.0.0.1:8000/translate/translate/"
 
     let speech = new SpeechSynthesisUtterance();
 
@@ -47,8 +57,7 @@
     })
 
     speaker.addEventListener("click", ()=>{
-      speech.lang = inputLanguage.value
-      console.log("hello");
+      speech.lang = outputLanguage.value
       speech.text = output.textContent
       window.speechSynthesis.speak(speech)
     })
@@ -62,8 +71,9 @@
     form.addEventListener("submit",async (e)=>{
       console.log(text.value);
       e.preventDefault()
-      const response = await fetch(`http://127.0.0.1:8000/translate/translate/?translate=${text.value}&language=${inputLanguage.value}`)
+      const response = await fetch(`${url}?translate=${text.value}&inlang=${inputLanguage.value}&outlang=${outputLanguage.value}`)
       const data = await response.json()
+      console.log(data);
       render(data.translation)
     })
   </script>

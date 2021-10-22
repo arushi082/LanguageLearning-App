@@ -21,9 +21,11 @@ def translate(request):
     """
     try:
         text = request.GET.get('translate')
-        language = request.GET.get('language')
-        translator= Translator(to_lang=language)
+        inLang = request.GET.get('inlang')
+        outLang = request.GET.get('outlang')
+        translator= Translator(to_lang=outLang ,from_lang = inLang)
         translation = translator.translate(text)
+        print(translation)
         context = {
             "translation": translation
         }

@@ -6,6 +6,13 @@
   <h1 class="dictionary__heading"> Dictionary </h1>
   <form class="dictionary__search">
     <input id="word" type="text" name="search" class="dictionary__search__box" placeholder="Input Your Word Here">
+    <select id="input-language" name="language" required>
+      <option value="En">English</option>
+      <option value="Hi">Hindi</option>
+      <option value="Fr">French</option>
+      <option value="de">German</option>
+      <option value="es">Spanish</option>
+    </select>
     <button type="submit" class="dictionary__search-btn">
       <img src="{% static 'Login/image/icon-search.svg' %}" alt="search">
     </button>
@@ -20,6 +27,7 @@
 
   const form = document.querySelector('form')
   const word = document.querySelector('#word')
+  const inputLanguage = document.querySelector('#input-language')
   const output = document.querySelector('#output')
 
   function render(data) {
@@ -43,7 +51,7 @@
 
   form.addEventListener("submit",async (e)=>{
     e.preventDefault()
-    const response = await fetch(`http://127.0.0.1:8000/dictionary/dictionary/?search=${word.value}`)
+    const response = await fetch(`http://127.0.0.1:8000/dictionary/dictionary/?search=${word.value}&inlang=${inputLanguage.value}`)
     const data = await response.json()
     render(data)
   })
