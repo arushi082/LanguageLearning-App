@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from PyDictionary import PyDictionary
+from translate import Translator
 from Logging.logger import AppLogger
 
 logger = AppLogger()
@@ -23,26 +24,33 @@ def dictionary(request):
     """
     try:
         search = request.GET.get('search')
+        inLang = request.GET.get('inlang')
+        translator= Translator(to_lang='En' ,from_lang = inLang)
+        translation = translator.translate(search)
         dictionary = PyDictionary
-        items = []
-        meaning = dictionary.meaning(search)
-        synonyms = dictionary.synonym(search)
-        antonyms = dictionary.antonym(search)
+
+        meaning = dictionary.meaning(translation)
+        synonyms = dictionary.synonym(translation)
+        antonyms = dictionary.antonym(translation)
+
+        file_object = open("Dictionary_log.txt", 'a+')
+        logger.log(file_object, 'Searches for meaning Synonmys and Antonyms', 'Info')
+        file_object.close()
+
         context = {
             'meaning': meaning,
             'synonyms': synonyms,
             'antonyms': antonyms
         }
+
         file_object = open("Dictionary_log.txt", 'a+')
-        logger.log(file_object, 'Searches for meaning Synonmys and Antonyms', 'Info')
-        file_object.close()
-        return JsonResponse(context)
         logger.log(file_object, 'Prints Meaning of searched word', 'Info')
         file_object.close()
+
+        return JsonResponse(context)
     except Exception as e:
         logger.log(
             file_object,
             f'Exception occured in searching meaning. Message: {str(e)}',
             'Error')
         file_object.close()
-
