@@ -107,6 +107,7 @@ class Lesson(models.Model):
         """
         return reverse('curriculum:lesson_list', kwargs={'slug':self.subject.slug, 'standard':self.Standard.slug})
         file_object = open("Curriculum_model_log.txt", 'a+')
-        logger.log(file_object, 'url generated using slugs ', 'Info'
+        logger.log(file_object, 'url generated using slugs ', 'Info')
         file_object.close()
+
 # Create your models here.
